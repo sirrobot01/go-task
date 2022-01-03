@@ -4,7 +4,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"net/http"
-	"task/tasks"
+	"task/routers"
 )
 
 func main() {
@@ -21,7 +21,7 @@ func main() {
 		return context.String(http.StatusOK, "Working")
 	})
 
-	tasks.InitRoute(e.Group("tasks"))
+	routers.InitTaskRoute(e.Group("tasks"))
 
 	e.Logger.Fatal(e.Start(":8080"))
 }
