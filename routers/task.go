@@ -5,7 +5,7 @@ import (
 	"task/handlers"
 )
 
-func InitTaskRoute(r *echo.Group) {
+func TaskRoute(r *echo.Group) {
 	r.GET("/:id", handlers.GetTasks)
 	r.GET("/", handlers.GetTasks)
 	r.POST("/", handlers.CreateTask)

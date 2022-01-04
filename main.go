@@ -21,7 +21,7 @@ func main() {
 		return context.String(http.StatusOK, "Working")
 	})
 
-	routers.InitTaskRoute(e.Group("tasks"))
+	routers.InitRouters(e)
 
 	e.Logger.Fatal(e.Start(":8080"))
 }
