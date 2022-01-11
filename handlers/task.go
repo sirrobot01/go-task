@@ -39,13 +39,13 @@ func UpdateTask(c echo.Context) error {
 
 func CreateTask(c echo.Context) error {
 	task := &models.Task{
-		ID: models.Seq,
+		ID: models.TaskSeq,
 	}
 	if err := c.Bind(task); err != nil {
 		return err
 	}
 	models.Tasks[task.ID] = task
-	models.Seq++
+	models.TaskSeq++
 	return c.JSON(http.StatusCreated, task)
 }
 

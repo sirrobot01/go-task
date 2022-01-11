@@ -7,6 +7,6 @@ type Task struct {
 }
 
 var (
-	Tasks = map[int]*Task{}
-	Seq   = 1
+	Tasks   = map[int]*Task{}
+	TaskSeq = 1
 )

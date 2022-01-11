@@ -6,7 +6,7 @@ import (
 )
 
 func TaskRoute(r *echo.Group) {
-	r.GET("/:id", handlers.GetTasks)
+	r.GET("/:id", handlers.GetTask)
 	r.GET("/", handlers.GetTasks)
 	r.POST("/", handlers.CreateTask)
 	r.PUT("/:id", handlers.UpdateTask)
